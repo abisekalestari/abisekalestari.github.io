@@ -12,6 +12,21 @@
 
           gtag('config', 'G-6M4H464SR2');
         </script>
+        <script>
+          function gtagSendEvent(url) {
+            var callback = function () {
+              if (typeof url === 'string') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'click', {
+              'event_callback': callback,
+              'event_timeout': 2000,
+              // <event_parameters>
+            });
+            return false;
+          }
+        </script>
         <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11434402620"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-11434402620'); </script>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
